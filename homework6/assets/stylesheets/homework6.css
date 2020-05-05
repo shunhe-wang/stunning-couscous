@@ -1,0 +1,149 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+
+
+
+body{
+	font-family: "Lato", sans-serif;
+	/* color: purple;*/ 
+	line-height: 2;
+	padding: 3rem;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 550% 550%;
+	animation: gradient 5s linear infinite;
+	color: #fff;
+}
+
+
+
+.intro{
+	/*color: blue; */
+	text-align: center;
+	margin-bottom: 6rem;
+	text-transform: uppercase;
+}
+
+.name{
+	display: block;
+	font-size: 4rem;
+	font-weight: 400;
+	letter-spacing: 1.5rem;
+	padding-top: 6rem;
+	animation-name: moveToRight, floater;
+	animation-duration: 2s, 5s;
+	animation-delay: 0s, 2s;
+	animation-timing-function: ease-in-out, ease-in-out;
+	animation-iteration-count: 1, infinite;
+	/*can stack animations, but only if you write one by one*/
+}
+
+
+.description{
+	display: block;
+	font-size: 1.4rem;
+	font-weight: 300;
+	letter-spacing: 1.3 rem;
+	padding-top: 1rem;
+	animation: moveToLeft 2s ease-in-out 1;
+}
+
+.email{
+	display: block;
+}
+
+@keyframes gradient {
+	0%{
+		background-position: 0% 50%;
+	}
+
+	50%{
+		background-position: 100% 75%;
+
+	}
+
+	100%{
+		background-position: 0% 50%;
+	}
+}
+
+.contact{
+	text-decoration: none;
+	background-color: #fff;
+	padding: 1rem 4rem;
+	border-radius: 10rem;
+	display: inline-block;
+	margin-top: 5rem;
+	color: #777;
+	font-size: 1.1rem;
+	letter-spacing: .75rem;
+	transition: all .2s;
+	animation: moveUp 2s ease-out 2s;
+	animation-fill-mode: backwards;
+}
+
+.contact:hover{
+	transform: translateY(-1rem);
+	/* origin is top left corner in html */
+	box-shadow: 0px 2rem 4rem rgba(0, 0, 0, 0.2);
+	/*x, y, blur*/
+}
+
+.contact:active{
+	transform: translate&(-.25rem);
+	box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+#datboi {
+	height: 400px;
+	width: 400px;
+}
+
+@keyframes moveToRight {
+	0%{
+		opacity: 0;
+		transform: translateX(-10rem);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes moveToLeft {
+	0%{
+		opacity: 0;
+		transform: translateX(10rem);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes moveUp{
+		0%{
+		opacity: 0;
+		transform: translateY(10rem);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes floater{
+	0%{
+		transform: translateY(0);
+		text-shadow: .1rem 0 0 rgba(0,0,0,0.2);
+	}
+	50%{
+		transform: translateY(-1rem);
+		text-shadow: .1rem 0 0 rgba(0,0,0,0.2);
+	}
+	100%{
+		transform: translateY(0);
+		text-shadow: .1rem 0 0 rgba(0,0,0,0.2);
+	}
+}
