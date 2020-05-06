@@ -101,6 +101,15 @@ body{
 	width: 400px;
 }
 
+#video {
+	display: block;
+	margin: 100em auto 0 auto;
+}
+
+.intro #supersecret{
+	font-size: 0.6em;
+}
+
 @keyframes moveToRight {
 	0%{
 		opacity: 0;
